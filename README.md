@@ -37,13 +37,59 @@ Python ipybn file:
 
 ### Generate the Database:
 
-1. Use the #(Link to the sql data file) to run the whole script./
+1. Use the #(Link to the sql data file) to run the whole script.\
 Using SQL, a total of 15 tables are added for the book store. Name the database as 'gravity books'. 
 2. Using "Table Data Import Wizard" in the MySQL Workbench to import the population.csv file. 
 3. Using "Table Data Import Wizard" in the MySQL Workbench to import the income.csv file. 
 4. By this time, your gravity_books database should have a total of 17 tables.
 
-### To improve readability and security, run the *Final.sql file to generate the VIEWs for this database.
+### Creating VIEWs:
+To improve readability and security, run the *Final.sql file to generate the VIEWs for this database.
+
+1. transaction_period VIEW: Let the book store to display the entire transaction period.
+2. books_sold_per_year VIEWL: allow the bookstore to determine the annual number of books sold. (in the years 2020–2023)
+3. whole_period_stats VIEW: the total number of customers, orders, and books sold within the transaction time.
+4. value_customer VIEW: Top 10 customers that bought most books at this book store.
+5. ship_meth VIEW: Shipping preferences of the customer and their percentage.
+6. author_books_rank VIEW: authors whose books are most prevalent in book stores.
+7. best_selling_books VIEW: 10 best-selling books.
+8. books_profit VIEW: The top ten books for this bookstore in terms of revenue.
+9. books_language VIEW: provides information about the book numbers and percentage of each language in this bookstore.
+10. cust_profit VIEW: Top 5 customers at this bookstore who spent the most money.
+11. cust_city VIEW: The top 5 cities where this book retailer received the most orders.
+12. books_sold_month VIEW: The annual number of books sold per month.
+13. order_ym VIEW: Simple table of each month's orders.
+14. order_date_sale VIEW: Allow books tore to check how many book they sold per day. 
+15. join20 VIEW: 2020 Numbers of Books sold to each country.
+16. join21 VIEW: 2021 numbers of Books sold to each country.
+17. pop_income_books VIEW: tables combining information on population, income, and book sales.
+18. Country_YM_Books VIEW: The quantity of books sold, as well as the monthly revenue, for each nation.
+19. profit_pop_in VIEW: Revenue from all books sold, broken down by country, population, and income level.
+
+### Transforming data types:
+
+1. combining the first and last names of valued customers to better view the table.
+2. To simplify the view for the books store, the order date is changed from the order data time to a short date.
+
+### Load data to csv:
+Load the two transformed tables mentioned above to CSV files to assist a book store in better estimating its daily profit and checking out valued customers.
+
+### Visualized the Output:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

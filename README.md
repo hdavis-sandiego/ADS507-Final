@@ -13,7 +13,7 @@ Halle Davis: https://github.com/hdavis-sandiego \
 UE Wang: https://github.com/UE-Wang 
 
 # Table of Contents:
-### Dataset:
+### Step 1: Get the Data:
 
 1. The initial SQL file that generated the data is located at:
 
@@ -35,7 +35,7 @@ Python ipybn file:
 
 # ? ipybn file
 
-### Generate the Database:
+### Step 2: Generate the Database:
 
 1. Use the #(Link to the sql data file) to run the whole script.\
 Using SQL, a total of 15 tables are added for the book store. Name the database as 'gravity books'. 
@@ -43,7 +43,7 @@ Using SQL, a total of 15 tables are added for the book store. Name the database 
 3. Using "Table Data Import Wizard" in the MySQL Workbench to import the income.csv file. 
 4. By this time, your gravity_books database should have a total of 17 tables.
 
-### Creating VIEWs:
+### Step 3: Creating VIEWs:
 To improve readability and security, run the *Final.sql file to generate the VIEWs for this database.
 
 1. transaction_period VIEW: Let the book store to display the entire transaction period.
@@ -66,15 +66,43 @@ To improve readability and security, run the *Final.sql file to generate the VIE
 18. Country_YM_Books VIEW: The quantity of books sold, as well as the monthly revenue, for each nation.
 19. profit_pop_in VIEW: Revenue from all books sold, broken down by country, population, and income level.
 
-### Transforming data types:
+### Step 4: Data connection to Jupyter Notebook:
+
+First, we will need to import the needed packages:
+
+```
+import numpy as no
+import pandas as pd
+import pymysql as mysql
+import seaborn as sns
+import matplotlib.pyplot as plt 
+import plotly.express as px
+```
+
+connecting to the MySQL gravity books database as instructed.
+```
+conn=mysql.connect( host='localhost',
+                    port=int(3306),
+                    user='root',
+                    passwd='****',
+                    db='gravity_books')
+```
+
+Print the tables and VIEWs we built in MySQL to make sure the data is clear and readable.
+```
+tableNames = pd.read_sql("""SHOW TABLES""", conn) 
+tableNames
+```
+
+### Step 5: Transforming data types:
 
 1. combining the first and last names of valued customers to better view the table.
 2. To simplify the view for the books store, the order date is changed from the order data time to a short date.
 
-### Load data to csv:
+### Step 6:Load data to csv:
 Load the two transformed tables mentioned above to CSV files to assist a book store in better estimating its daily profit and checking out valued customers.
 
-### Visualized the Output:
+### Step 7: Visualized the Output:
 
 
 

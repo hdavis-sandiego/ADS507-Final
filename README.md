@@ -17,7 +17,7 @@ UE Wang: https://github.com/UE-Wang
 
 1. Population of each countries: Download the population.csv file. The original file can be found here: https://data.worldbank.org/indicator/SP.POP.TOTL
 
-2. Income of each countries: Download the income.csv file. The original file can be found here: ? Data Source Link
+2. Income of each countries: Download the income.csv file. The original file can be found here: https://data.worldbank.org/indicator/SP.POP.TOTL
 
 ### Step 2: Generate the Database:
 

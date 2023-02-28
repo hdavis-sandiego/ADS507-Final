@@ -89,7 +89,7 @@ Load the two transformed tables mentioned above to CSV files to assist a book st
 
 ### Step 7: Visualized the Output:
 
-**Note: Steps 4-7 can also be completed by downloading the running the ADS 507 Final Project.ipynb code file in Python.
+**Note: Steps 4-7 can also be completed by downloading the running the MS ADS 507 Python Code.ipynb code file in Python.
 
 
 
